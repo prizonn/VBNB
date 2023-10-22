@@ -1,0 +1,150 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+header, footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    grid-column: 1 / -1;
+}
+
+header a{
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 1rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.intro-section {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.intro-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.intro-section p {
+    font-size: 1.2rem;
+    color: #777;
+}
+
+.product-home {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.product-home h3 {
+    text-align: center;
+}
+
+.product-home img {
+    max-width: 300px;
+    max-height: auto;
+}
+
+.product-home p {
+    text-align: center;
+}
+
+.product-item {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.product-item article {
+    margin-bottom: 1rem;
+}
+
+.product-item h3 {
+    text-align: center;
+}
+
+.product-item img {
+    max-width: 100%;
+}
+
+.product-item p {
+    text-align: center;
+}
+
+
+@media (min-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    
+
+    .intro-section {
+        grid-column: 1 / -1;
+    }
+
+    .product-home {
+        max-width: 1500px;
+        height: 650px;
+        margin: 0;
+
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 5rem;
+        /*brukte deler av denne videoen https://www.youtube.com/watch?v=4lWqMugJAzU for bruk av Flex og Grid om hverandre*/
+    }
+
+    .product-home img {
+        max-height: auto;
+        max-width: 500px;
+    }
+
+    .product-item {
+        max-width: 1500px;
+        height: 650px;
+        margin: 0;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 5rem;}
+
+    .product-item img {
+        max-height: 500px;
+        max-width: auto;
+    }
+
+}
+
+/*Tok også mye inspirasjon fra dine github prosjekter som du har lastet opp jevnt gjennom hele oppgaven*/
+/*Spurte også ChatGPT om enkle småting gjennom hele som hvordan man deler opp grid templates riktig, men kopierte aldri noen koder direkte*/
